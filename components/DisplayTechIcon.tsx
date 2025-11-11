@@ -1,7 +1,5 @@
 import { cn, getTechLogos } from '@/lib/utils'
 import Image from 'next/image'
-import React from 'react'
-import { ur } from 'zod/v4/locales'
 
 const DisplayTechIcon = async ({techStack}: TechIconProps) => {
     const techIcon = await getTechLogos(techStack)
