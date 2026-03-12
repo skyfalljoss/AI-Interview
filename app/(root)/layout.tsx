@@ -5,13 +5,13 @@ import Link from 'next/link'
 import { redirect } from 'next/navigation'
 import { ReactNode } from 'react'
 
-const RootLayout = async ({children}: {children: ReactNode}) => {
+const RootLayout = async ({ children }: { children: ReactNode }) => {
 
   const isUserAuthenticated = await isAuthenticated()
 
-  if(!isUserAuthenticated){
+  if (!isUserAuthenticated) {
     redirect('/sign-in');
-  } 
+  }
 
   return (
     <div className='root-layout'>
@@ -19,7 +19,7 @@ const RootLayout = async ({children}: {children: ReactNode}) => {
         <Link href="/" className='flex item-center gap-2'>
           <Image
             src="/logo.svg"
-            alt= "PrepInterview"
+            alt="PrepInterview"
             width={38}
             height={32}
           />
